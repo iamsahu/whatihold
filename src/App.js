@@ -117,8 +117,8 @@ function App() {
       <div class="sharethis-inline-share-buttons"></div>
       <button onClick={()=>getAccount()}>Enable Ethereum</button>
       <button onClick={()=>getChainID()}>Get ChainID</button> */}
-      <button onClick={()=>getMyWallet()}>Get Wallet</button><br/>
-      <button onClick={()=>getContractDetails()}>Get Contract Details</button><br/>
+      {/* <button onClick={()=>getMyWallet()}>Get Wallet</button><br/>
+      <button onClick={()=>getContractDetails()}>Get Contract Details</button><br/> */}
       
       {/* <div class="mt-5 md:mt-0 md:col-span-2">
       <form action="#" onSubmit={getMyWallet}>
