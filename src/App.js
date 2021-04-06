@@ -2,20 +2,20 @@ import './App.css';
 import React,{useState} from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from 'axios'
-import TokenDisplay from './Components/TokenDisplay'
+// import TokenDisplay from './Components/TokenDisplay'
 import Web3 from 'web3';
 import useForm from './util/hook';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 
 //  from Web3
 //Markcuba: 0x95abDa53Bc5E9fBBDce34603614018d32CED219e
 //my: 0x723d170F1795F6365f0546Fb28288a08e7e86327
 function App() {
-  const { loginWithRedirect } = useAuth0();
+  // const { loginWithRedirect } = useAuth0();
   const [tokens, setTokens] = useState("")
-  const { values, onChange, onSubmit } = useForm(createPostCallback, {
-		address: "",
-	});
+  // const { values, onChange, onSubmit } = useForm(createPostCallback, {
+	// 	address: "",
+	// });
   const BN = Web3.utils.BN
   if (typeof window.ethereum !== 'undefined') {
     console.log('MetaMask is installed!');
@@ -45,16 +45,16 @@ function App() {
     console.log(message)
   })
 
-  async function getAccount() {
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    const account = accounts[0];
-    console.log(account)
-  }
+  // async function getAccount() {
+  //   const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+  //   const account = accounts[0];
+  //   console.log(account)
+  // }
 
-  async function getChainID(){
-    const chainId = await window.ethereum.request({ method: 'eth_chainId' });
-    console.log(chainId)
-  }
+  // async function getChainID(){
+  //   const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+  //   console.log(chainId)
+  // }
 
   async function getMyWallet(address){
     const amber = 'UAK75bed94d4381b4c3525cd20495579202'
