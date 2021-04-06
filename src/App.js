@@ -57,7 +57,7 @@ function App() {
   // }
 
   async function getMyWallet(address){
-    const amber = 'UAK75bed94d4381b4c3525cd20495579202'
+    const amber =  process.env.REACT_APP_AMBER;
     axios.get('https://web3api.io/api/v2/addresses/'+address+'/token-balances/latest?includePrice=true&fields=symbol,address,price_amount_quote,price_amount_total',{
       headers:{
         'x-amberdata-blockchain-id':'1c9c969065fcd1cf',
@@ -71,7 +71,7 @@ function App() {
   }
 
   async function getContractDetails(){
-    const amber = 'UAK75bed94d4381b4c3525cd20495579202'
+    const amber = process.env.REACT_APP_AMBER;
     axios.get('https://web3api.io/api/v2/contracts/0x33Df153Fc823f3Ac4c051EDCdDf82f161aBEfa54',{
       headers:{
         'x-amberdata-blockchain-id':'1c9c969065fcd1cf',
